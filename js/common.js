@@ -7,7 +7,18 @@ $(document).ready(function () {
 	  slidesToShow: 4,
 	  slidesToScroll: 1,
 	  prevArrow: $('.ceiling-arrow__left'),
-	  nextArrow: $('.ceiling-arrow__right')
+	  nextArrow: $('.ceiling-arrow__right'),
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          variableWidth: true,
+          dots: true,
+        }
+      }
+    ]
   });
   $('.calculator-checkbox').on('change', function() {
   	let parent = $(this).parents('.calculator-block');
@@ -16,6 +27,37 @@ $(document).ready(function () {
   	}
   	else{
   		$(parent).addClass('calculator-block-disabled');
+  	}
+  })
+  $('.work-slide').on('click', function() {
+    //alert(1);
+  })
+  let count_slide = $('.solutions-slide').length;
+  let counter_slider = 1;
+  $('.solutions-now')[0].innerHTML = count_slide;
+  $('.solutions-arrow_r').on('click', function() {
+  	if (counter_slider < count_slide) {
+  		counter_slider += 1;
+  		$('.solutions-count_num')[0].innerHTML = counter_slider;
+  	}
+  })
+  $(".footer-item").on("click", 'a', function (event) {
+    event.preventDefault();
+    $('.menu-modal').removeClass('menu-modal-active');
+    let id  = $(this).attr('href'),
+    top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 1500);
+  });
+  $('.nav-burger').on('click', function() {
+    $('.menu-modal').addClass('menu-modal-active');
+  })
+  $('.menu-modal-close').on('click', function() {
+    $('.menu-modal').removeClass('menu-modal-active');
+  })
+  $('.solutions-arrow_l').on('click', function() {
+  	if (counter_slider > 1) {
+  		counter_slider -= 1;
+  		$('.solutions-count_num')[0].innerHTML = counter_slider;
   	}
   })
   $('.calculator-range').on('input', function() {
@@ -31,10 +73,25 @@ $(document).ready(function () {
   	  nextArrow: $('.ceiling-arrow__right_o'),
   	  variableWidth: true,
   	  swipe: false,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            dots: true,
+          }
+        }
+      ]
     });
     $('.work-slide').on('click', function() {
     	return false;
     })
+    $('.solutions-slider').slick({
+  	  infinite: false,
+  	  slidesToShow: 1,
+  	  slidesToScroll: 1,
+  	  prevArrow: $('.solutions-arrow_l'),
+  	  nextArrow: $('.solutions-arrow_r'),
+    });
     $('.reviews-slider').slick({
   	  infinite: true,
   	  slidesToShow: 2,
@@ -44,6 +101,16 @@ $(document).ready(function () {
   	  nextArrow: $('.ceiling-arrow__right_r'),
   	  variableWidth: true,
   	  swipe: true,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 1,
+            dots: true,
+            variableWidth: false,
+          }
+        }
+      ]
     });
     $('.work-slider').slick({
   	  infinite: true,
@@ -51,7 +118,15 @@ $(document).ready(function () {
   	  variableWidth: true,
   	  swipe: true,
   	  centerMode: true,
-  	  focusOnSelect: true
+  	  focusOnSelect: true,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            dots: true,
+          }
+        }
+      ]
     });
   $('#file-input').on('change', function() {
   	let file = $('#file-input')[0].files[0]

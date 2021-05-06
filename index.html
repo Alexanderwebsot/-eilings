@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<img class="body-bg" src="img/body-bg.png" alt="">
+<img class="body-bg" src="img/boy-bg.png" alt="">
 <div class="body-wrapper">
 	<div class="menu-modal">
 		<img src="img/menu-close.png" alt="" class="menu-modal-close">
@@ -77,9 +77,18 @@
 			</a>
 		</div>
 	</div>
+	<div class="dark-window"></div>
+	<div class="modal-video">
+		<img class="modal-video-close" src="img/menu-close.png" alt="">
+		<iframe src="https://www.youtube.com/watch?v=m16v1KkZoi8" frameborder="0"></iframe>
+	</div>
+	<div class="modal-image">
+		<img class="modal-video-close" src="img/menu-close.png" alt="">
+		<img class="modal-image__content" src="img/works-1.png" alt="">
+	</div>
 	<header class="header">
 		<img src="img/header-bg.png" alt="" class="header-bg">
-		<nav class="nav">
+		<nav class="nav wow bounceInDown">
 			<div class="nav-container container">
 				<div class="nav-logo nav-block">
 					<img src="img/logo.png" alt="">
@@ -125,9 +134,10 @@
 		</nav>
 		<div class="header-content">
 			<div class="container">
-				<div class="header-play">
+				<div class="wow slideInRight header-play">
 					<div class="header-play-button">
-						<img src="img/play.png" alt="">
+						<img class="pc-visible" src="img/play.png" alt="">
+						<img class="mob-visible" src="img/play-triangel-mobi.png" alt="">
 					</div>
 					<span class="header-play__text">
 						Посмотреть 2-х мин. <br>
@@ -139,25 +149,25 @@
 				    </div>
 				</div>
 				<h1 class="header-content__title">
-					<span class="header-content__title_span_1">
+					<span class="wow slideInLeft header-content__title_span_1" data-wow-delay="0s">
 						Все современные виды работ
 					</span> <br>
-					<span class="header-content__title_span_3">
+					<span class="wow slideInLeft header-content__title_span_3" data-wow-delay="0s">
 						с натяжными <br>
 						потолками<br>
 					</span>
-					<span class="header-content__title_span_2">
+					<span class="wow slideInLeft header-content__title_span_2" data-wow-delay="0s">
 						Мы делаем то , что <span>не делают конкуренты.</span>
 					</span>
 				</h1>
-				<div class="header-content-wrapper">
+				<div class="wow slideInLeft header-content-wrapper">
 					<a href="" class="btn-body header-btn header-btn-applications">Оставить заявку</a>
-					<a href="" class="header-btn header-btn-more btn-body-orange">Подробнее</a>
+					<a href="#solutions" class="header-btn header-btn-more btn-body-orange">Подробнее</a>
 				</div>
 			</div>
 		</div>
 	</header>
-	<section class="ceilings">
+	<section class="ceilings wow bounceInUp">
 		<div class="ceilings-slider container">
 			<div class="ceilings-slide">
 				<div class="ceilings-block">
@@ -294,7 +304,7 @@
 				Рассчитать ваш проект
 			</h2>
 			<div class="calculator-row">
-				<div class="calculator-bottom-wrapper">
+				<div class="calculator-bottom-wrapper wow slideInLeft">
 					<div class="calculator-left">
 						<div class="calculator-left__left">
 							<div class="calculator-block">
@@ -491,7 +501,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="calculator-right">
+				<div class="calculator-right wow slideInRight">
 					<form action="#" class="calculator-form">
 						<span class="calculator__title">
 							Оставить заявку
@@ -510,7 +520,7 @@
 	</section>
 	<section class="advantages" id="advantages">
 		<div class="advantages-container container">
-			<div class="advantages-block">
+			<div class="advantages-block bounceInUp wow">
 				<img src="img/advantages-1.png" alt="">
 				<div class="ceilings-block-text">
 					<span class="ceilings-block__title">
@@ -523,7 +533,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="advantages-block">
+			<div class="advantages-block bounceInUp wow">
 				<img src="img/advantages-2.png" alt="">
 				<div class="ceilings-block-text">
 					<span class="ceilings-block__title">
@@ -536,7 +546,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="advantages-block">
+			<div class="advantages-block bounceInUp wow">
 				<img src="img/advantages-3.png" alt="">
 				<div class="ceilings-block-text">
 					<span class="ceilings-block__title">
@@ -549,7 +559,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="advantages-block">
+			<div class="advantages-block bounceInUp wow">
 				<img src="img/advantages-4.png" alt="">
 				<div class="ceilings-block-text">
 					<span class="ceilings-block__title">
@@ -563,7 +573,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="advantages-block">
+			<div class="advantages-block bounceInUp wow">
 				<img src="img/advantages-5.png" alt="">
 				<div class="ceilings-block-text">
 					<span class="ceilings-block__title">
@@ -577,7 +587,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="advantages-block">
+			<div class="advantages-block bounceInUp wow">
 				<img src="img/advantages-6.png" alt="">
 				<div class="ceilings-block-text">
 					<span class="ceilings-block__title">
@@ -591,7 +601,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="advantages-block">
+			<div class="advantages-block bounceInUp wow">
 				<img src="img/advantages-7.png" alt="">
 				<div class="ceilings-block-text">
 					<span class="ceilings-block__title">
@@ -611,7 +621,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="advantages-block">
+			<div class="advantages-block bounceInUp wow">
 				<img src="img/advantages-8.png" alt="">
 				<div class="ceilings-block-text">
 					<span class="ceilings-block__title">
@@ -629,7 +639,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="advantages-block">
+			<div class="advantages-block bounceInUp wow">
 				<img src="img/advantages-9.png" alt="">
 				<div class="ceilings-block-text">
 					<span class="ceilings-block__title">
@@ -649,7 +659,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="solutions" id="solutions">
+	<section class="solutions wow slideInLeft" id="solutions">
 		<div class="container">
 			<img class="solutions-slide-bg solutions-img-change" src="img/slider-bg-1.png" alt="">
 			<div class="solutions-top">
@@ -859,7 +869,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="work" id="work">
+	<section class="work wow bounceInUp" id="work">
 		<div class="container">
 			<h2 class="reviews-title work-title">
 				Наши работы
@@ -868,25 +878,25 @@
 		<div class="work-slider-wrapper">
 			<div class="work-slider-abc">
 				<div class="work-slider">
-					<a href="img/works-1.png" data-lightbox="roadtrip" class="work-slide">
+					<a uk-lightbox href="img/works-1.png" data-lightbox="roadtrip" class="work-slide">
 						<img src="img/works-1.png" alt="">
 					</a>
-					<a href="img/works-2.png" data-lightbox="roadtrip" class="work-slide">
+					<a uk-lightbox href="img/works-2.png" data-lightbox="roadtrip" class="work-slide">
 						<img src="img/works-2.png" alt="">
 					</a>
-					<a href="img/works-3.png" data-lightbox="roadtrip" class="work-slide">
+					<a uk-lightbox href="img/works-3.png" data-lightbox="roadtrip" class="work-slide">
 						<img src="img/works-3.png" alt="">
 					</a>
-					<a href="img/works-4.png" data-lightbox="roadtrip" class="work-slide">
+					<a uk-lightbox href="img/works-4.png" data-lightbox="roadtrip" class="work-slide">
 						<img src="img/works-4.png" alt="">
 					</a>
-					<a href="img/works-5.png" data-lightbox="roadtrip" class="work-slide">
+					<a uk-lightbox href="img/works-5.png" data-lightbox="roadtrip" class="work-slide">
 						<img src="img/works-5.png" alt="">
 					</a>
-					<a href="img/works-6.png" data-lightbox="roadtrip" class="work-slide">
+					<a uk-lightbox href="img/works-6.png" data-lightbox="roadtrip" class="work-slide">
 						<img src="img/works-6.png" alt="">
 					</a>
-					<a href="img/works-7.png" data-lightbox="roadtrip" class="work-slide">
+					<a uk-lightbox href="img/works-4.png" data-lightbox="roadtrip" class="work-slide">
 						<img src="img/works-4.png" alt="">
 					</a>
 				</div>
@@ -895,10 +905,10 @@
 	</section>
 	<section class="orders">
 		<div class="container">
-			<h2 class="orders-title">
+			<h2 class="orders-title wow rollIn">
 				Заказов выполненно более чем
 			</h2>
-			<div class="orders-count">
+			<div class="orders-count wow rollIn">
 				<img src="img/60000.png" alt="">
 			</div>
 		</div>
@@ -1007,7 +1017,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="partition" id="partition">
+	<section class="partition wow slideInLeft" id="partition">
 		<div class="partition-container container">
 			<div class="partition-block">
 				<h2 class="partition__title">
@@ -1049,7 +1059,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="reviews" id="reviews">
+	<section class="reviews wow bounceInUp" id="reviews">
 		<div class="container">
 			<h2 class="reviews-title">
 				Что говорят о нас наши клиенты
@@ -1267,7 +1277,7 @@
 	<section class="present">
 		<img class="present-bg" src="img/last-block-bg.png" alt="">
 		<div class="container">
-			<div class="present-play">
+			<div class="present-play wow slideInRight">
 				<div class="promo-circles">
 			        <div class="promo-circles__item"></div> 
 			        <div class="promo-circles__item"></div>
@@ -1278,17 +1288,17 @@
 					за собой предложение!
 				</div>
 			</div>
-			<h3 class="present-subtitle">
+			<h3 class="present-subtitle wow slideInLeft">
 				Дарим потолки 
 			</h3>
-			<h2 class="present-title">
+			<h2 class="present-title wow slideInLeft">
 				Каждый второй - <br>
 				в подарок!
 			</h2>
-			<span class="present-text">
+			<span class="present-text wow slideInLeft">
 				Весенняя акция на ПВХ потолки.
 			</span>
-			<div class="present-block">
+			<div class="present-block wow bounceInUp">
 				<div class="present-block-text">
 					<div class="present-block__span">
 						Действует до  
@@ -1311,7 +1321,7 @@
 			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4622c1aee1cb5b9652088971a70347e0fec4b83bff7e5381cd3554949f08af4c&amp;width=100%25&amp;height=720&amp;lang=ru_RU&amp;scroll=false"></script>
 		</div>
 		<div class="container">
-			<div class="contacts-block">
+			<div class="contacts-block wow slideInLeft">
 				<div class="contacts-block__aress">
 					<span>г. Санкт-Петербург</span> <br>
 					ул.Пушкина, дом 2 
@@ -1333,7 +1343,7 @@
 			</div>
 		</div>
 	</section>
-	<footer class="footer">
+	<footer class="footer wow bounceInUp">
 		<div class="footer-container container">
 			<div class="footer-logo">
 				<a href="/">

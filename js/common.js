@@ -2,6 +2,7 @@ $(document).ready(function () {
   $('.calculator-range').rangeslider({
   	polyfill : false,
   });
+  new WOW().init();
   $('.ceilings-slider').slick({
 	  infinite: false,
 	  slidesToShow: 4,
@@ -48,11 +49,35 @@ $(document).ready(function () {
     top = $(id).offset().top;
     $('body,html').animate({scrollTop: top}, 1500);
   });
+  $(".header-content-wrapper").on("click", 'a', function (event) {
+    event.preventDefault();
+    $('.menu-modal').removeClass('menu-modal-active');
+    let id  = $(this).attr('href'),
+    top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 1500);
+  });
   $('.nav-burger').on('click', function() {
     $('.menu-modal').addClass('menu-modal-active');
   })
   $('.menu-modal-close').on('click', function() {
     $('.menu-modal').removeClass('menu-modal-active');
+  })
+  $('.header-play-button').on('click', function() {
+    $('.modal-video').addClass('modal-video-active');
+    $('.dark-window').addClass('dark-window-active');
+  })
+  $('.work-slide').on('click', function() {
+    let element = $('.modal-image__content');
+    let src = $(this).attr('href');
+    $(element).attr("src",src);
+    $('.modal-image').addClass('modal-image-active');
+    $('.dark-window').addClass('dark-window-active');
+    return false;
+  })
+  $('.modal-video-close').on('click', function() {
+    $('.modal-video').removeClass('modal-video-active');
+    $('.modal-image').removeClass('modal-image-active');
+    $('.dark-window').removeClass('dark-window-active');
   })
   $('.solutions-arrow_l').on('click', function() {
   	if (counter_slider > 1) {

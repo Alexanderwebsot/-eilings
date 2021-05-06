@@ -79,6 +79,11 @@ $(document).ready(function () {
     $('.modal-image').removeClass('modal-image-active');
     $('.dark-window').removeClass('dark-window-active');
   })
+  $('.dark-window').on('click', function() {
+    $('.modal-video').removeClass('modal-video-active');
+    $('.modal-image').removeClass('modal-image-active');
+    $('.dark-window').removeClass('dark-window-active');
+  })
   $('.solutions-arrow_l').on('click', function() {
   	if (counter_slider > 1) {
   		counter_slider -= 1;

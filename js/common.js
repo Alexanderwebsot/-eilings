@@ -2,7 +2,33 @@ $(document).ready(function () {
   $('.calculator-range').rangeslider({
   	polyfill : false,
   });
-  new WOW().init();
+ new WOW().init();
+ $('.form-btn-1').on('click', function() {
+   $('.modal-form__title').text('Обратный звонок');
+ })
+ $('.form-btn-2').on('click', function() {
+   $('.modal-form__title').text('Оставить заявку');
+ })
+ let $windowWidth = $(window).width();
+ if ($windowWidth < 1200) {
+   let img = $('.solutions-slick__img')[0]
+   let img_h = $(img).css('height');
+   let block_img = $('.solutions-slick__block');
+   $(block_img).css('height', img_h);
+ }
+ $('.form-btn-4').on('click', function() {
+   $('.modal-form__title').text('Заказать перегородку');
+ })
+  $('.form-btn').on('click', function() {
+    $('.modal-form').addClass('modal-form-active');
+    $('.dark-window').addClass('dark-window-active');
+    return false;
+  })
+  $('.modal-form-close').on('click', function() {
+    $('.modal-form').removeClass('modal-form-active');
+    $('.dark-window').removeClass('dark-window-active');
+    return false;
+  })
   $('.ceilings-slider').slick({
 	  infinite: false,
 	  slidesToShow: 4,
@@ -123,6 +149,7 @@ $(document).ready(function () {
     return false;
   })
   $('.dark-window').on('click', function() {
+    $('.modal-form').removeClass('modal-form-active');
     $('.modal-video').removeClass('modal-video-active');
     $('.modal-image').removeClass('modal-image-active');
     $('.dark-window').removeClass('dark-window-active');
